@@ -30,7 +30,7 @@ function fly(robot) {
     bot.nav.on("altitudeChange", function(data) {
         console.log("Altitude:", data);
         // Drone is higher than 1.5 meters up
-        if (data &gt; 1.5) {
+        if (data > 1.5) {
             bot.drone.land();
         }
     });
@@ -41,15 +41,15 @@ function fly(robot) {
     bot.drone.disableEmergency();
     bot.drone.ftrim();
     bot.drone.takeoff();
-    bot.drone.left(0.2);
-    after(16*1000, function(){
-        bot.drone.left(0);
+    after(8*1000, function() {
+        bot.drone.left(0.2);
     });
     after(10*1000, function(){
+        bot.drone.left(0);
         bot.drone.land();
     });
     after(15*1000, function(){
-        bot.drone.stop;
+        bot.drone.stop();
     });
 
 
