@@ -19,7 +19,7 @@ var TrackerUtils = (function() {
         }
 
         tracker.setColors(colors);
-    }
+    };
 
 
     my.addTrackingColor = function(value, name, tracker) {
@@ -60,7 +60,7 @@ var TrackerUtils = (function() {
             });
         }
 
-    }
+    };
 
     my.loadImage = function (data, element) {
         // console.log("received frame");
@@ -75,9 +75,9 @@ var TrackerUtils = (function() {
             var context = canvas.getContext('2d');   
             context.drawImage(this, 0, 0);
             URL.revokeObjectURL(url);
-        }
+        };
         img.src = url;
-    }
+    };
 
     return my;
 
